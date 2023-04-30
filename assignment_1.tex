@@ -179,26 +179,18 @@ $$\pr{A \ and \ B \ fails}=0.15$$
  $$\pr{A\ fails\ alone}=0.05$$
  \textbf{Solution:}
  Given ,
-Probability that A fails
+
 \begin{align}
-\pr{A^\prime} = 0.20
-\end{align}  
-Probability that B fails alone 
-\begin{align}
-\pr{AB^ \prime}=0.15
+\pr{A^\prime} &= 0.20
+\pr{AB^ \prime}&=0.15
+\pr{A ^\prime B ^\prime}&=0.15
 \end{align}
-Probability that both A and B fail 
+Now to find,$\pr{A ^\prime|B ^\prime}$ we use
 \begin{align}
-\pr{A ^\prime B ^\prime}=0.15
+ \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} 
 \end{align}
-Now to find,
-Probability that both A fails given B has failed $\pr{A ^\prime|B ^\prime}$ and \mbox{Probability} that A fails alone $\pr{BA^\prime}$
- we use
-\begin{align}
- \pr{A ^\prime|B ^\prime}=\pr{ A ^\prime B ^\prime } /\pr{B^\prime}
-\end{align}
-to obtain $$\pr{B ^\prime}$$ 
-we know that,
+to obtain $\pr{B ^\prime}$ 
+we use,
 \begin{align}
  \pr{B^ \prime}&= \pr{A B ^\prime} + \pr{A ^\prime B ^\prime}
 \\             &=0.15 +0.15
@@ -209,7 +201,7 @@ now to find $\pr{A ^\prime|B ^\prime}$
  &\pr{A^\prime|B ^\prime}= 0.15/0.30
 \\ &\pr{A ^\prime|B ^\prime} = 0.50
 \end{align}
-similiarly, to obtain $\pr{B A ^\prime}$ we have to use $\pr{A ^\prime B ^\prime}$ and $\pr{A^\prime}$
+similiarly, to obtain $\pr{B A ^\prime}$ 
  we use
 \begin{align}
  \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime}
