@@ -187,31 +187,46 @@ An electronic assembley consists of two subsystems,say A and B.From previous tes
  Given ,
 
 \begin{align}
-\pr{A^\prime} &= 0.20
-\\\pr{AB^ \prime}&=0.15
-\\\pr{A ^\prime B ^\prime}&=0.15
+\pr{A^\prime} &= 0.20 \label{tot}
+\\\pr{AB^ \prime}&=0.15 \label{bot}
+\\\pr{A ^\prime B ^\prime}&=0.15 \label{cot}
 \end{align}
 Now to find,$\pr{A ^\prime|B ^\prime}$ we use
 \begin{align}
- \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} 
+ \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} \label{dot}
 \end{align}
 to obtain $\pr{B ^\prime}$ 
+\begin{align}
+B^ \prime(1)&=B^ \prime(A+A ^\prime)
+\\&=B^ \prime A +B^ \prime A ^\prime
+\ \text{since} ((B^ \prime A )(B^ \prime A ^\prime))=0
+\\\pr{B^ \prime}&=\pr{A B ^\prime} + \pr{A ^\prime B ^\prime} (\text{from First Axiom of Probabality}) \label{eq}
+\end{align}
 we use,
 \begin{align}
- \pr{B^ \prime}&= \pr{A B ^\prime} + \pr{A ^\prime B ^\prime}
-\\             &=0.15 +0.15
-\\ \implies \pr{B ^\prime} &=0.30
+ \pr{B^ \prime}&= \pr{A B ^\prime} + \pr{A ^\prime B ^\prime}  (\text{from }\eqref{eq})
+\\             &=0.15 +0.15 \ (\text{from } \eqref{bot},\eqref{cot})
+\\ \implies \pr{B ^\prime} &=0.30 \label{alpha}
 \end{align}
 now to find $\pr{A ^\prime|B ^\prime}$
 \begin{align}
- \pr{A^\prime|B ^\prime}&= 0.15/0.30
+ \pr{A^\prime|B ^\prime}&= 0.15/0.30 \  (\text{from }\eqref{alpha},\eqref{cot},\eqref{dot})
 \\ \implies \pr{A ^\prime|B ^\prime} &= 0.50
 \end{align}
 similiarly, to obtain $\pr{B A ^\prime}$ 
+\begin{align}
+B A ^\prime +B ^\prime A ^\prime &=B A ^\prime +B ^\prime A ^\prime
+\\ B A ^\prime +B ^\prime A^\prime&=A ^\prime(B ^\prime +B)
+\\ B A ^\prime +B ^\prime A ^\prime&=A^\prime
+\\ A^\prime &=  B A ^\prime +B ^\prime A ^\prime
+\ \text{since} ((A^ \prime B )(B^ \prime A ^\prime))=0
+\\ \pr{A^ \prime}&=\pr{B A ^\prime} + \pr{A ^\prime B ^\prime} (\text{from First Axiom of Probabality})
+\\ \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime} \label{tat}
+\end{align}
  we use
 \begin{align}
- \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime}
-\\ &= 0.20-0.15
+ \pr{B  A ^\prime}&=\pr{A^\prime}-\pr{A ^\prime B ^\prime} (\text(from ) \eqref{tat})
+\\ &= 0.20-0.15  \ (\text{from } \eqref{tot}, \eqref{cot})
 \\ \implies \pr{B  A^\prime} &= 0.05
 \end{align}
 \end {document}
