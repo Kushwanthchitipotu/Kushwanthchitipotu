@@ -179,18 +179,25 @@ An electronic assembley consists of two subsystems,say A and B.From previous tes
  \item $\pr{\text{A fails alone}}$
 \end{enumerate}
  \textbf{ans:}
- \begin{align}
- \pr{\text{A fails given B has failed}}&= 0.50
-\\ \pr{\text{A fails alone}}&=0.05
+ \begin{enumerate}
+ \item \begin{align}\pr{\text{A fails given B has failed}}&= 0.50
+\end{align}
+\item \begin{align}\pr{\text{A fails alone}}&=0.05 
  \end{align}
+\end{enumerate}
  \textbf{Solution:}
  Given ,
-
-\begin{align}
-\pr{A^\prime} &= 0.20 \label{eq:tot}
-\\\pr{AB^ \prime}&=0.15 \label{eq:bot}
-\\\pr{A ^\prime B ^\prime}&=0.15 \label{eq:cot}
-\end{align}
+ \begin{enumerate}
+ \item \begin{align}
+ \pr{A^\prime} &= 0.20 \label{eq:tot}
+ \end{align}
+ \item \begin{align}
+ \pr{AB^ \prime}&=0.15 \label{eq:bot}
+ \end{align}
+ \item \begin{align}
+ \pr{A ^\prime B ^\prime}&=0.15 \label{eq:cot}
+ \end{align}
+ \end{enumerate}
 Now to find,$\pr{A ^\prime|B ^\prime}$ we use
 \begin{align}
  \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} \label{eq:dot}
@@ -229,5 +236,5 @@ B A ^\prime +B ^\prime A ^\prime &=B A ^\prime +B ^\prime A ^\prime
 \\ &= 0.20-0.15  \ \text{from eq:} \eqref{eq:tot}, \eqref{eq:cot}
 \\ \implies \pr{B  A^\prime} &= 0.05
 \end{align}
-\end {document}
+\end{document}
 
