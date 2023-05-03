@@ -187,18 +187,14 @@ An electronic assembley consists of two subsystems,say A and B.From previous tes
 \end{enumerate}
  \textbf{Solution:}
  Given ,
- \begin{enumerate}
- \item \begin{align}
+ \begin{align}
  \pr{A^\prime} &= 0.20 \label{eq:tot}
- \end{align}
- \item \begin{align}
- \pr{AB^ \prime}&=0.15 \label{eq:bot}
- \end{align}
- \item \begin{align}
- \pr{A ^\prime B ^\prime}&=0.15 \label{eq:cot}
- \end{align}
- \end{enumerate}
-Now to find,$\pr{A ^\prime|B ^\prime}$ we use
+ \\\pr{AB^ \prime}&=0.15 \label{eq:bot}
+ \\\pr{A ^\prime B ^\prime}&=0.15 \label{eq:cot}
+ \end{align} 
+\begin{enumerate}
+
+\item to find,$\pr{A ^\prime|B ^\prime}$ we use
 \begin{align}
  \pr{A ^\prime|B ^\prime}=\frac{\pr{ A ^\prime B ^\prime }}{\pr{B^\prime}} \label{eq:dot}
 \end{align}
@@ -215,7 +211,7 @@ we use,
 \\             &=0.15 +0.15 \ (\text{from } \eqref{eq:bot},\eqref{eq:cot})
 \\ \implies \pr{B ^\prime} &=0.30 \label{eq:alpha}
 \end{align}
-now to find $\pr{A ^\prime|B ^\prime}$
+\item to find $\pr{A ^\prime|B ^\prime}$
 \begin{align}
  \pr{A^\prime|B ^\prime}&= 0.15/0.30 \  (\text{from }\eqref{eq:alpha},\eqref{eq:cot},\eqref{eq:dot})
 \\ \implies \pr{A ^\prime|B ^\prime} &= 0.50
@@ -236,5 +232,6 @@ B A ^\prime +B ^\prime A ^\prime &=B A ^\prime +B ^\prime A ^\prime
 \\ &= 0.20-0.15  \ \text{from eq:} \eqref{eq:tot}, \eqref{eq:cot}
 \\ \implies \pr{B  A^\prime} &= 0.05
 \end{align}
+\end{enumerate}
 \end{document}
 
