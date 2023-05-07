@@ -196,16 +196,15 @@ Find the probability \mbox{distribution} of number of successes in two tosses of
 \end{tabular}
 \end{enumerate}
  \textbf{Solution:}
-let, A: outcome of first throw of die,\mbox{A$\in \{1,2,3,4,5,6\}$}\\
-B: outcome of first throw of die,\mbox{B$\in \{1,2,3,4,5,6\}$}\\
+let, $Z_1$: outcome of first throw of die, \mbox{$Z_1\in \{1,2,3,4,5,6\}$}\\
+$Z_2$: outcome of first throw of die, \mbox{$Z_2\in \{1,2,3,4,5,6\}$}\\
 we know that
 \begin{align}
-\pr{A=i}&=\frac{1}{6}\ , i\in \{1,2,3,4,5,6\} \label{eq:v}\\
-\pr{B=j}&=\frac{1}{6}\  ,j\in \{1,2,3,4,5,6\} \label{eq:n}
+\pr{Z_j=i}&=\frac{1}{6}\ , i\in \{1,2,3,4,5,6\} \text{ and } j\in \{1,2\}  \label{eq:v}
 \end{align}
 since both A,B are independent
 \begin{align}
-\pr{A,B}&=\pr{A}.\pr{B} \label{eq:t}
+\pr{Z_1,Z_2}&=\pr{Z_1}.\pr{Z_2} \label{eq:t}
 \end{align}
 \begin{enumerate}
 \item finding probability distribution for appearance of number greater than 4\\
@@ -215,49 +214,38 @@ $\pr{X=x}$ : probability of X becoming x,x $\in \{ 0,1,2 \}$
 \begin{enumerate}
 \item finding $\pr{X=0}$
 \begin{align}
-\pr{X=0}&=\pr{A\leq4,B\leq4}\\
-&=\pr{A\leq4}.\pr{B\leq4} \label{eq:q}     (\text{from } \eqref{eq:t}) \\\\
-\pr{A\leq4}
-&=\pr{A=1}+\pr{A=2}+\pr{A=3}+\pr{A=4} \\
+\pr{X=0}&=\pr{Z_1\leq4,Z_2\leq4}\\
+&=\pr{Z_1\leq4}.\pr{Z_2\leq4} \label{eq:q}     (\text{from } \eqref{eq:t}) \\\\
+\pr{Z_i\leq4}
+&=\pr{Z_i=1}+\pr{Z_i=2}+\pr{Z_i=3}+\pr{Z_i=4} ,i\in \{1,2\}\\
 &=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v})\\
-\pr{A\leq4}&=\frac{4}{6}\label{eq:r}
-\end{align}
-similarly
-\begin{align}
-\pr{B\leq4}
-&=\pr{B=1}+\pr{B=2}+\pr{B=3}+\pr{B=4}\\
-&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v})\\
-\pr{B\leq4}&=\frac{4}{6} \label{eq:p}
+\pr{Z_i\leq4}&=\frac{4}{6} ,i\in \{1,2\} \label{eq:r}
 \end{align}
 now
 \begin{align}
-\pr{X=0}&=\frac{4}{6}*\frac{4}{6} (\text{from} \eqref{eq:q},\eqref{eq:p},\eqref{eq:r})\\
+\pr{X=0}&=\frac{4}{6}*\frac{4}{6} (\text{from} \eqref{eq:q},\eqref{eq:r})\\
 \pr{X=0}&=\frac{4}{9}
 \end{align}
 \item finding $\pr{X=1}$
 \begin{align}
-\pr{X=1}&=\pr{A>4}+\pr{B>4}-2.\pr{A>4,B>4}\\
-&=\pr{A>4}+\pr{B>4}-2.\pr{A>4}.\pr{B>4}  (\text{from } \eqref{eq:t})\\\\
-\pr{A>4}&=\pr{A=5}+\pr{A=6}\\
-&=\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v})\\
-\pr{A>4}&=\frac{2}{6} \label{eq:e}
+\pr{X=1}&=\pr{Z_1>4}+\pr{Z_2>4}-2.\pr{Z_1>4,Z_2>4}\\
+&=\pr{Z_1>4}+\pr{Z_2>4}-2.\pr{Z_1>4}.\pr{Z_2>4}  (\text{from } \eqref{eq:t})
 \end{align}
-similarly,
 \begin{align}
-\pr{B>4}&=\pr{B=5}+\pr{B=6}\\
-&=\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:n})\\
-\pr{B>4}&=\frac{2}{6} \label{eq:y}
+\pr{Z_i>4}&=\pr{Z_i=5}+\pr{Z_i=6} , i\in \{1,2\} \\
+&=\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v})\\
+\pr{Z_i>4}&=\frac{2}{6} ,i\in \{1,2\} \label{eq:e}
 \end{align}
 now,
 \begin{align}
-\pr{X=1}&=\pr{A>4}+\pr{B>4}-2.\pr{A>4,B>4}\\
-&=\frac{2}{6}+\frac{2}{6}-2.\frac{2}{6}.\frac{2}{6} \ (\text{from} \eqref{eq:e}),\eqref{eq:y})\\
+\pr{X=1}&=\pr{Z_1>4}+\pr{Z_2>4}-2.\pr{Z_1>4,Z_2>4}\\
+&=\frac{2}{6}+\frac{2}{6}-2.\frac{2}{6}.\frac{2}{6} \ (\text{from} \eqref{eq:e})\\
 \pr{X=1}&=\frac{4}{9}
 \end{align}
 \item finding $\pr{X=2}$
 \begin{align}
-\pr{X=2}&=\pr{A>4,B>4}\\
-&=\pr{A>4}.\pr{B>4}\  (\text{from} \eqref{eq:t})\\
+\pr{X=2}&=\pr{Z_1>4,Z_2>4}\\
+&=\pr{Z_1>4}.\pr{Z_2>4}\  (\text{from} \eqref{eq:t})\\
 &= \frac{2}{6}.\frac{2}{6} \ (\text{from} \eqref{eq:e})\\
 \pr{X=2}&=\frac{1}{9}
 \end{align}
@@ -268,29 +256,26 @@ $\pr{Y=y}$ : probability of Y becoming y,y $\in \{ 0,1\}$
 \begin{enumerate}
 \item finding $\pr{Y=0}$
 \begin{align}
-\pr{Y=0}&=\pr{A<6,B<6}\\
-&=\pr{A<6}.\pr{B<6} (\text{from } \eqref{eq:t})\\\\
-\pr{A<6}&=\pr{A=1}+\pr{A=2}+\pr{A=3}+\pr{A=4}+\pr{A=5} \\
-&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v}) \\
-\pr{A<6}&=\frac{5}{6} \label{eq:a}
+\pr{Y=0}&=\pr{Z_1<6,Z_2<6}\\
+&=\pr{Z_1<6}.\pr{Z_2<6} (\text{from } \eqref{eq:t})
 \end{align}
-similarly,
 \begin{align}
-\pr{B<6}&=\pr{B=1}+\pr{B=2}+\pr{B=3}+\pr{B=4}+\pr{B=5}\\
-&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:n})\\
-\pr{B<6}&=\frac{5}{6} \label{eq:b}
+\pr{Z_i<6}&=\pr{Z_i=1}+\pr{Z_i=2}+\pr{Z_i=3}+\pr{Z_i=4}+\pr{Z_i=5} ,i\in \{1,2\}
+\\
+&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6} (\text{from } \eqref{eq:v}) \\
+\pr{Z_i<6}&=\frac{5}{6} ,i\in \{1,2\}\label{eq:a}
 \end{align}
 now,
 \begin{align}
-\pr{Y=0}&=\pr{A<6}.\pr{B<6}\\
-&=\frac{5}{6}.\frac{5}{6}  (\text{from } \eqref{eq:a},\eqref{eq:b})\\
+\pr{Y=0}&=\pr{Z_1<6}.\pr{Z_2<6}\\
+&=\frac{5}{6}.\frac{5}{6}  (\text{from } \eqref{eq:a})\\
 \pr{Y=0}&=\frac{25}{36}
 \end{align}
 \item finding $\pr{Y=1}$
 \begin{align}
-\pr{Y=1}&=\pr{A<6,B=6}+\pr{A=6,B<6}+\pr{A=6,B=6} \  (\text{from } \eqref{eq:t})\\
-&=\pr{A<6}.\pr{B=6}+\pr{A=6}.\pr{B<6}+\pr{A=6}.\pr{B=6}\\
-&=\frac{5}{6}.\frac{1}{6}+\frac{1}{6}.\frac{5}{6}+\frac{1}{6}.\frac{1}{6}  (\text{from }\eqref{eq:v},\eqref{eq:n},\eqref{eq:a},\eqref{eq:b} )\\
+\pr{Y=1}&=\pr{Z_1<6,Z_2=6}+\pr{Z_1=6,Z_2<6}+\pr{Z_1=6,Z_2=6} \  (\text{from } \eqref{eq:t})\\
+&=\pr{Z_1<6}.\pr{Z_2=6}+\pr{Z_1=6}.\pr{Z_2<6}+\pr{Z_1=6}.\pr{Z_2=6}\\
+&=\frac{5}{6}.\frac{1}{6}+\frac{1}{6}.\frac{5}{6}+\frac{1}{6}.\frac{1}{6}  (\text{from }\eqref{eq:v},\eqref{eq:a})\\
 \pr{Y=1}&=\frac{11}{36}
 \end{align}
 \end{enumerate}
